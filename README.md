@@ -17,8 +17,18 @@ macOS에서 [Plover](https://www.openstenoproject.org/) 스테노 소프트웨�
 |-----------|------|
 | `user.json` | 사용자 커스텀 딕셔너리 (Output 토글 스트로크 등) |
 | `plover.cfg` | Plover 전체 설정 |
-| `ko_cas_base.py` | Korean CAS 기본 딕셔너리 |
+| `ko_cas_base.py` | Korean CAS 기본 한글 조합 딕셔너리 |
 | `ko_cas_numbers.py` | Korean CAS 숫자 딕셔너리 |
+| `ko_cas_briefs.json` | Korean CAS 한글 기본 약어 딕셔너리 (기본 문장부호, 대명사, 접속사 등) |
+| `ko_cas_particles.json` | Korean CAS 조사 딕셔너리 |
+| `ko_cas_conjunctions.json` | Korean CAS 접속사 딕셔너리 |
+| `ko_cas_conjugations.json` | Korean CAS 활용/어미 딕셔너리 |
+| `ko_cas_block_briefs.json` | Korean CAS 음절 약어 딕셔너리 |
+| `ko_cas_numbers_and_units.json` | Korean CAS 숫자 및 단위 딕셔너리 |
+| `ko_cas_commands.json` | Korean CAS 기능/명령어 딕셔너리 |
+| `ko_cas_symbols.json` | Korean CAS 기호 딕셔너리 |
+| `ko_cas_single_keys.json` | Korean CAS 단일 키 딕셔너리 |
+| `ko_cas_english_fingerspelling.json` | Korean CAS 영어 핑거스펠링 딕셔너리 |
 | `plugins/` | 설치된 플러그인 (`definition.py` 패치 포함) |
 
 ## 설치 방법
@@ -76,6 +86,16 @@ DEFAULT_DICTIONARIES: List[str] = [
 # 변경 후
 DEFAULT_DICTIONARIES: List[str] = [
     os.path.join(_DICT_DIR, 'ko_cas_numbers.py'),
+    os.path.join(_DICT_DIR, 'ko_cas_briefs.json'),
+    os.path.join(_DICT_DIR, 'ko_cas_symbols.json'),
+    os.path.join(_DICT_DIR, 'ko_cas_commands.json'),
+    os.path.join(_DICT_DIR, 'ko_cas_english_fingerspelling.json'),
+    os.path.join(_DICT_DIR, 'ko_cas_single_keys.json'),
+    os.path.join(_DICT_DIR, 'ko_cas_block_briefs.json'),
+    os.path.join(_DICT_DIR, 'ko_cas_conjugations.json'),
+    os.path.join(_DICT_DIR, 'ko_cas_conjunctions.json'),
+    os.path.join(_DICT_DIR, 'ko_cas_numbers_and_units.json'),
+    os.path.join(_DICT_DIR, 'ko_cas_particles.json'),
     os.path.join(_DICT_DIR, 'ko_cas_base.py'),
     os.path.expanduser('~/Library/Application Support/plover/user.json'),
 ]
